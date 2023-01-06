@@ -14,6 +14,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item
 {
+    const WEIGHT_COEFFICIENT = 11;
+
+    const DIMENSION_COEFFICIENT = 11;
+
     protected $amazon_price;
     protected $product_weight;
     protected $width;
@@ -29,11 +33,7 @@ class Item
         $this->depth = $depth;
         $this->fee_by_product_type = $fee_by_product_type;
     }
-
-    const WEIGHT_COEFFICIENT = 11;
-
-    const DIMENSION_COEFFICIENT = 11;
-
+    
     /**
      * calculator item price
      * @return float|int
